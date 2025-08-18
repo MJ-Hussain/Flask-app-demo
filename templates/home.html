@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Careers</title>
+    <style>
+        h1 {
+           font-size: 40px ;
+           font-family: Roboto;
+           font-weight: normal;
+           color: rgb(100, 100, 100);
+           text-align: center;
+        }
+        #banner {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+        }
+
+        h2 {
+            font-size: 30px;
+            font-family: Roboto;
+            color: rgb(50, 50, 50);
+            text-align: center;
+            font-weight: normal;
+        }
+        .body-text {
+            font-size: 18px;
+            font-family: Arial, sans-serif;
+            color: rgb(80, 80, 80);
+            text-align: justify;
+            margin: 0 auto;
+            width: 80%;
+        }
+        #content {
+            max-width: 720px;
+            margin: 0 auto 0 auto;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+    <h1>Welcome to the Careers Page!</h1>
+    <img id="banner" src="{{ url_for('static', filename='banner.jpg') }}" height="200" alt="Banner Image">
+        <h2>About Us</h2>
+        <p class="body-text">Lorem ipsum dolor sit amet consectetur adipiscing elit. 
+            Quisque faucibus ex sapien vitae pellentesque sem placerat. 
+            In id cursus mi pretium tellus duis convallis. 
+            Tempus leo eu aenean sed diam urna tempor. 
+            Pulvinar vivamus fringilla lacus nec metus bibendum egestas. 
+            Iaculis massa nisl malesuada lacinia integer nunc posuere. 
+            Ut hendrerit semper vel class aptent taciti sociosqu. 
+            Ad litora torquent per conubia nostra inceptos himenaeos.</p>
+        <h2>Open positions</h2>
+            <div style="text-align: center;">
+                <button>Contact Us</button>
+                <p> Copyright © 2023 Our Company. All rights reserved.</p>
+            </div>
+        </div>
+</body>
+</html>
