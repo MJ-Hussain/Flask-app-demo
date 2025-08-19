@@ -10,32 +10,46 @@
             width: 100%;
             height: 350px;
             object-fit: cover;
+            margin-bottom: 15px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-    <h1 class="text-center mt-2 mb-4">Welcome to the Careers Page!</h1>
+{% include 'nav.html' %}
+    
     <img class="img-fluid" id="banner" src="{{ url_for('static', filename='banner.jpg') }}" height="200" alt="Banner Image">
-        <h2 class="text-center mt-2 mb-4">About Us</h2>
-        <p class="lead">Lorem ipsum dolor sit amet consectetur adipiscing elit. 
-            Quisque faucibus ex sapien vitae pellentesque sem placerat. 
-            In id cursus mi pretium tellus duis convallis. 
-            Tempus leo eu aenean sed diam urna tempor. 
-            Pulvinar vivamus fringilla lacus nec metus bibendum egestas. 
-            Iaculis massa nisl malesuada lacinia integer nunc posuere. 
-            Ut hendrerit semper vel class aptent taciti sociosqu. 
-            Ad litora torquent per conubia nostra inceptos himenaeos.</p>
-        <h2 class="text-center">Open positions</h2>
-        <p>
+        <div class="container">
+         <h1 class="text-center mt-2 mb-4">Welcome to the Careers Page!</h1>
+         <div class="row" style="margin-bottom: 16px;">
+            <div class="col-md-6">
+                <p class="lead">Lorem ipsum dolor sit amet consectetur adipiscing elit. 
+                Quisque faucibus ex sapien vitae pellentesque sem placerat. 
+                In id cursus mi pretium tellus duis convallis. 
+                Tempus leo eu aenean sed diam urna tempor. 
+                Pulvinar vivamus fringilla lacus nec metus bibendum egestas. 
+                Iaculis massa nisl malesuada lacinia integer nunc posuere. 
+                Ut hendrerit semper vel class aptent taciti sociosqu. 
+                Ad litora torquent per conubia nostra inceptos himenaeos.
+                </p>
+            </div>
+
+            <div class="d-none d-md-block col-md-6">
+                <img src="/static/working.jpg" style="height: 320px;border-radius: 4px;">
+            </div>
+        </div>
+
+            <div><h2 class="text-center">Open positions</h2></div>
+
+            <div>
             {% for job in jobs %}
            {% include 'jobitems.html' %}
             {% endfor %}
-        </p>
+            </div>
+
             <div class="text-center">
-                <button class="btn btn-primary btn-lg">Contact Us</button>
-                <p class="mt-4"> Copyright © 2023 Our Company. All rights reserved.</p>
+                <a class="btn btn-primary btn-lg" href="mailto:hello@company.ai?subject=Questions%20and%20Queries&body=My%20Name%3A%20%3CYour%20Name%3E%0D%0AMy%20Question%3A%20%3CYour%20Question%3E">Contact Us</a>
             </div>
         </div>
+{% include 'footer.html' %}
 </body>
 </html>
