@@ -1,0 +1,27 @@
+<h4>Application Form</h4>
+<form action="/job/{{job.id}}/apply" method="post">
+    <div class="mb-2">
+        <label>Full Name</label><br>
+        <input type="text" name="name" placeholder="Your Name" required>
+    </div>
+    <div class="mb-2">
+        <label>Email</label><br>
+        <input type="email" name="email" placeholder="Your Email" required>
+    </div>
+    <div class="mb-2">
+        <label>LinkedIn</label><br>
+        <input type="text" name="linkedin" placeholder="Your LinkedIn Profile link">
+    </div>
+
+    <div class="mb-2">
+        <label>Cover Letter</label><br>
+        <textarea name="cover_letter" rows="5" placeholder="Write your cover letter here..."></textarea>
+    </div>
+
+    <div class="mb-2">
+        <label>Resume URL</label><br>
+        <input type="text" name="resume_url" placeholder="Your Resume URL" required>
+    </div>
+
+    <input type="submit">
+</form>
